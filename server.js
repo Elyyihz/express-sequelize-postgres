@@ -15,10 +15,6 @@ app.use(cors({
 dotenv.config();
 app.use(express.json());
 
-app.get('/favicon.ico', (req, res) => res.status(204).end());
-
-app.use(express.static(path.join(path.resolve(), 'public')));
-
 app.use('/users', userRoutes);
 app.use('/messages', messageRoutes);
 
