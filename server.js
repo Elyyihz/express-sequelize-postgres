@@ -3,13 +3,12 @@ import dotenv from 'dotenv';
 import sequelize from './db.js';
 import userRoutes from './routes/user.js';
 import messageRoutes from './routes/message.js';
-import express from "express";
 import cors from "cors";
 
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://meusite.com"]
+  origin: ["http://localhost:3000", "https://express-sequelize-postgres.vercel.app/"]
 }));
 
 dotenv.config();
